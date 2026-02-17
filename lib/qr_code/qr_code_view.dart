@@ -7,6 +7,8 @@ import 'package:qr_scanner/features/history/widgets/history_card.dart';
 import 'package:qr_scanner/features/history/models/ticket_model.dart';
 // import 'dart:developer';
 
+import 'package:qr_scanner/theme.dart';
+
 class QrCodeView extends StatelessWidget {
   final QrCodeController controller = QrCodeController();
 
@@ -20,14 +22,14 @@ class QrCodeView extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: AppColors.darkBlue),
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text(
           'Qr Code',
           style: TextStyle(
             fontFamily: 'Outfit',
-            color: Colors.black,
+            color: AppColors.darkBlue,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -82,7 +84,7 @@ class QrCodeView extends StatelessWidget {
               child: IconButton(
                 icon: const Icon(
                   Icons.image_outlined,
-                  color: Color(0xFF43A078),
+                  color: AppColors.darkBlue,
                 ),
                 onPressed: () => controller.scanFromGallery(),
               ),
@@ -160,7 +162,7 @@ class QrCodeView extends StatelessWidget {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF43A078),
+                      backgroundColor: AppColors.darkBlue,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),

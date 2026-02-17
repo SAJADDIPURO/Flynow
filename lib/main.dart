@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:qr_scanner/home/home_view.dart';
 import 'package:qr_scanner/generate_qr/generate_qr_view.dart';
 import 'package:qr_scanner/home/splash_screen.dart';
+import 'package:qr_scanner/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'FlyNow',
-      theme: ThemeData(
-        useMaterial3: true,
-        fontFamily: 'Outfit',
-      ),
+      theme: AppTheme.themeData,
       
       initialRoute: '/splash',
       

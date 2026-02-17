@@ -4,6 +4,7 @@ import 'package:qr_flutter/qr_flutter.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:qr_scanner/home/home_controller.dart';
 import 'dart:typed_data';
+import 'package:qr_scanner/theme.dart';
 
 class GenerateQrView extends StatefulWidget {
   const GenerateQrView({super.key});
@@ -70,7 +71,7 @@ class _GenerateQrViewState extends State<GenerateQrView> {
           ),
           title: const Column(
             children: [
-              Icon(Icons.check_circle, color: Color(0xFF43A078), size: 60),
+                  Icon(Icons.check_circle, color: AppColors.darkBlue, size: 60),
               SizedBox(height: 10),
               Text(
                 "Download Berhasil",
@@ -91,7 +92,7 @@ class _GenerateQrViewState extends State<GenerateQrView> {
               child: ElevatedButton(
                 onPressed: () => Navigator.pop(context),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF43A078),
+                  backgroundColor: AppColors.darkBlue,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -111,7 +112,7 @@ class _GenerateQrViewState extends State<GenerateQrView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF1F8E9),
+      backgroundColor: AppColors.lightBlue,
       appBar: AppBar(title: const Text('Generate QR')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24),
@@ -134,7 +135,7 @@ class _GenerateQrViewState extends State<GenerateQrView> {
                   child: QrImageView(
                     data: qrData,
                     size: 200,
-                    foregroundColor: const Color(0xFF43A078),
+                    foregroundColor: AppColors.darkBlue,
                   ),
                 ),
               ),
@@ -144,7 +145,7 @@ class _GenerateQrViewState extends State<GenerateQrView> {
                 icon: const Icon(Icons.download),
                 label: const Text("Download QR Code"),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF43A078),
+                  backgroundColor: AppColors.darkBlue,
                   foregroundColor: Colors.white,
                 ),
               ),

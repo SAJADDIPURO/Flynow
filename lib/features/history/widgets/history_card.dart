@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qr_scanner/theme.dart';
 // import '../models/ticket_model.dart';
 // import 'package:qr_scanner/home/home_controller.dart';
 
@@ -12,8 +13,8 @@ class HistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool isRedeemed = ticket.isRedeemed;
     final Color statusColor = isRedeemed
-        ? const Color(0xFF43A078) 
-        : Colors.redAccent; 
+      ? AppColors.darkBlue
+      : Colors.redAccent;
 
     return InkWell(
       onTap: onTap,

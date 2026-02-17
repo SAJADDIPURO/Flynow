@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qr_scanner/theme.dart';
 import 'package:qr_scanner/home/home_controller.dart';
 import 'package:qr_scanner/features/history/models/ticket_model.dart';
 import 'package:qr_scanner/features/history/widgets/history_card.dart';
@@ -11,7 +12,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF1F8E9),
+      backgroundColor: AppColors.lightBlue,
       body: Stack(
         children: [
           SafeArea(
@@ -32,7 +33,7 @@ class HomeView extends StatelessWidget {
                             fontFamily: 'Outfit',
                             fontSize: 32,
                             fontWeight: FontWeight.bold,
-                            color: Color(0xFF43A078),
+                            color: AppColors.darkBlue,
                           ),
                         ),
                         Container(
@@ -40,12 +41,12 @@ class HomeView extends StatelessWidget {
                             color: Colors.white,
                             shape: BoxShape.circle,
                           ),
-                          child: IconButton(
+                            child: IconButton(
                             onPressed: () =>
                                 Navigator.pushNamed(context, '/settings'),
                             icon: const Icon(
                               Icons.settings_outlined,
-                              color: Color(0xFF43A078),
+                              color: AppColors.darkBlue,
                               size: 28,
                             ),
                           ),
@@ -126,9 +127,9 @@ class HomeView extends StatelessWidget {
                     children: [
                       const SizedBox(height: 12),
                       _buildHandleBar(),
-                      const TabBar(
-                        labelColor: Color(0xFF43A078),
-                        indicatorColor: Color(0xFF43A078),
+                      TabBar(
+                        labelColor: AppColors.darkBlue,
+                        indicatorColor: AppColors.darkBlue,
                         tabs: [
                           Tab(text: "Unredeemed"),
                           Tab(text: "Redeemed"),
@@ -178,7 +179,7 @@ class HomeView extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 35,
-                backgroundColor: const Color(0xFF43A078),
+                backgroundColor: AppColors.darkBlue,
                 child: Icon(icon, color: Colors.white, size: 35),
               ),
               const SizedBox(height: 12),
