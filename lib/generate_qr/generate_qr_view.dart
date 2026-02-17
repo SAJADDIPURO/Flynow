@@ -39,7 +39,7 @@ class _GenerateQrViewState extends State<GenerateQrView> {
       await screenshotController.capture().then((Uint8List? image) async {
         if (image != null) {
           try {
-            await Gal.putImageBytes(image, name: "ScanGo_$generatedId");
+            await Gal.putImageBytes(image, name: "FlyNow_$generatedId");
 
             if (textController.text.isNotEmpty) {
               _homeController.addTicketToHistory(

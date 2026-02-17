@@ -28,7 +28,7 @@ class HomeView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text(
-                          'ScanGo',
+                          'FlyNow',
                           style: TextStyle(
                             fontFamily: 'Outfit',
                             fontSize: 32,

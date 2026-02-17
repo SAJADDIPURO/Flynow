@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             const SizedBox(height: 20),
             const Text(
-              'ScanGo',
+              'FlyNow',
               style: TextStyle(
                 fontFamily: 'Outfit',
                 fontSize: 42,
